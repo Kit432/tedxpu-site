@@ -103,6 +103,12 @@ a {
   transform-origin: left;
 }
 
+@media (max-width: 900px) {
+  .header-logo {
+    width: clamp(8.25rem, 22vw, 14rem);
+  }
+}
+
 /* Hero */
 
 .hero-scroll-cue {
@@ -813,45 +819,76 @@ a {
 
 @media (max-width: 1100px) {
   :root {
-    --teams-content-gap: clamp(5rem, 11vw, 8rem);
+    --teams-content-gap: clamp(2.5rem, 5vw, 4rem);
     --teams-content-margin-top: clamp(-5rem, -6vw, -2.5rem);
   }
 
-  .about-cover {
+
+  .team-group {
+    grid-template-columns: 1fr;
+    gap: clamp(1.5rem, 3vw, 4rem);
     min-height: auto;
   }
 
-  .about-title {
-    width: 126vw;
+  .team-card-collage,
+  .team-group:nth-child(even) .team-card-collage {
+    justify-content: center;
+    min-height: auto;
+    padding-left: 0;
   }
 
-  .about-brand-row {
-    column-gap: clamp(0.15rem, 0.8vw, 0.8rem);
+  .team-group-curation .team-photo-card {
+    width: min(100%, clamp(34rem, 44vw, 50rem));
+    padding-top: 6rem;
+  }
+
+  .team-photo-card,
+  .team-group-graphs .team-photo-card,
+  .team-group-mark .team-photo-card,
+  .team-group-exp .team-photo-card,
+  .team-group-speakers .team-photo-card,
+  .team-group-spons .team-photo-card {
+    display: flex;
+    width: min(100%, clamp(30rem, 72vw, 62rem));
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+  }
+
+  .team-copy-stack {
+    justify-self: center;
+    max-width: min(100%, 30rem);
+  }
+
+  .team-copy {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .about-brand-ted,
+  .about-brand-tedx {
+    color: red;
+    transform: translateY(-3.5rem);
+    font-size: clamp(12rem, 16cqw, 20rem);
   }
 
   .about-brand-connector {
-    font-size: clamp(8.5rem, 27vw, 17rem);
+    color: black;
+    font-size: clamp(14rem, 20cqw, 26rem);
+    line-height: -3.40;
+    margin-inline: clamp(-4rem, -6cqw, -8rem);
+    transform: translateY(-2rem) translateX(2rem);
   }
 
-  .about-copy-grid {
-    width: min(calc(100% - clamp(2rem, 6vw, 4rem)), 68rem);
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
-    column-gap: clamp(2rem, 6vw, 4rem);
-    margin-top: clamp(1.75rem, 4vw, 3.25rem);
-  }
+  .about-brand-row {
+    column-gap: clamp(2rem, 3cqw, 4rem);
 
-  .about-copy-ted {
-    grid-column: 1;
-  }
-
-  .about-copy-tedx {
-    grid-column: 2;
   }
 
   .about-copy-block {
-    font-size: clamp(1.1rem, 2.4vw, 1.65rem);
+    margin-top: -5rem;
   }
-
 }
 
 @media (max-width: 720px) {
