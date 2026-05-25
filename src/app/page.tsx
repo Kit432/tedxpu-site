@@ -23,7 +23,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/#webpage`,
       url: `${siteUrl}/`,
-      name: "Sensorium - TEDxPanteion University 2026",
+      name: "TEDxPanteion University",
       description:
         "TEDxPanteion University 2026 presents Sensorium, an event exploring perception, the senses, technology, society, science, and culture.",
       isPartOf: { "@id": `${siteUrl}/#website` },
@@ -90,7 +90,7 @@ export default function HomePage() {
           Built by Λιν Χονγκ Τσε (Κιτ) — TEDxPanteion University Sensorium Website
           Github: https://github.com/Kit432
       */}
-      <h1 className="sr-only">Sensorium - TEDxPanteion University 2026</h1>
+      <h1 className="sr-only">TEDxPanteion University</h1>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

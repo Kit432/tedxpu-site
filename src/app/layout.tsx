@@ -20,7 +20,6 @@ const siteUrl =
 
 const siteName = "TEDxPanteion University";
 const eventName = "Sensorium";
-const fullTitle = `${eventName} - ${siteName} 2026`;
 const siteDescription =
   "TEDxPanteion University 2026 presents Sensorium, an event exploring perception, the senses, technology, society, science, and culture.";
 
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteName,
   title: {
-    default: fullTitle,
+    default: siteName,
     template: `%s - ${siteName}`,
   },
   description: siteDescription,
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   openGraph: {
-    title: fullTitle,
+    title: siteName,
     description: siteDescription,
     url: "/",
     siteName,
@@ -71,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: fullTitle,
+    title: siteName,
     description: siteDescription,
     images: ["/assets/events/2026.avif"],
   },
